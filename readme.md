@@ -6,7 +6,7 @@ Don’t know what a dat is? [Learn more here](https://datproject.org).
 
 ## Why
 
-Dat is great, but at the moment it can become expensive if you are storing large datasets on a VPS. This tool helps you cheaply add redundancy to your peer to peer network, by enabling you to serve multiple readonly dat archives from static web hosts.
+Dat is awesome, but at the moment it can become expensive if you are storing large datasets on a VPS. This tool helps you cheaply add redundancy to your peer to peer network by enabling you to serve multiple read-only dat archives from static web hosts.
 
 With this library you can setup one server with minimal storage and serve any number of large dats that are stored elsewhere.
 
@@ -14,7 +14,7 @@ With this library you can setup one server with minimal storage and serve any nu
 
 ## Install
 
-To use as a cli utility
+To use as a CLI utility
 
 ```
 npm dat-http-proxy -g
@@ -52,4 +52,29 @@ If you modify the `url-feeds` file, the `dat-http-proxy` process will update liv
 
 **Note:** At the moment this application will fail hard if you pass a malformed url.
 
-### Command Line Interface
+### API
+
+Simply import the package into your project.
+
+```js
+// es6
+import httpProxy from 'dat-http-proxy'
+// commonjs
+var httpProxy = require('dat-http-proxy')
+```
+
+`var dats = httpProxy.all()`
+
+Return all loaded dat archives. Explicitly ignores those loading or scheduled for removal.
+
+`var urls = httpProxy.urls()`
+
+Returns all the urls currently being served. Explicitly ignores those loading or scheduled for removal.
+
+`var dat = httpProxy.add(url)`
+
+Attempts to load a url as a dat archive and begins serving it. Returns a promise which resolves to a dat instance.
+
+`httpProxy.remove(url)`
+
+Removes the url and closes the associated dat archive.
