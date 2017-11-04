@@ -1,0 +1,31 @@
+{
+  "name": "dat-http-proxy",
+  "version": "1.0.0",
+  "description": "A utility to serve dat from url",
+  "main": "index.js",
+  "bin": {
+    "dat-http-proxy": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dat",
+    "http",
+    "proxy",
+    "server"
+  ],
+  "author": "Benjamin Forster",
+  "license": "MIT",
+  "dependencies": {
+    "dat-node": "^3.5.5",
+    "dat-storage": "^1.0.3",
+    "http-random-access": "^1.0.1",
+    "minimist": "^1.2.0",
+    "read-file-live": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  }
+}
