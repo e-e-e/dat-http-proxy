@@ -1,6 +1,6 @@
 {
   "name": "dat-http-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool for replicating dats stored at static http/s web addresses",
   "main": "index.js",
   "bin": {
