@@ -1,7 +1,7 @@
 {
   "name": "dat-http-proxy",
   "version": "1.0.0",
-  "description": "A utility to serve dat from url",
+  "description": "A tool for replicating dats stored at static http/s web addresses",
   "main": "index.js",
   "bin": {
     "dat-http-proxy": "bin/cli.js"
