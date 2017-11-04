@@ -38,6 +38,10 @@ function add (url) {
       }
       dats[url] = dat
       dat.joinNetwork()
+      dat.archive.on('error', (e) => {
+        console.log('There was an error!')
+        console.log(e)
+      })
       console.log(`Serving ${url} from dat://${dat.key.toString('hex')}`)
       return dat
     })
