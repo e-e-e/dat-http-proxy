@@ -17,13 +17,13 @@ With this library you can setup one server with minimal storage and serve any nu
 To use as a CLI utility
 
 ```
-npm dat-http-proxy -g
+npm install dat-http-proxy -g
 ```
 
 or to use from within another project
 
 ```
-npm dat-http-proxy --save
+npm install dat-http-proxy --save
 ```
 
 ## Usage
